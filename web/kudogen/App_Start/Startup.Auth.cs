@@ -20,9 +20,9 @@ namespace kudogen
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: "0000000040119DE5",
+                clientSecret: "Sqza3KPaAjEUhsw2g1YAnoRZBuh7d1Ix");
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
