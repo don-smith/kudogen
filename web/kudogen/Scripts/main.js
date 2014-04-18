@@ -1,19 +1,20 @@
-﻿(function () {
+﻿(function (kudogen) {
     "use strict";
 
-    var cachedClient = null;
+    kudogen.cachedClient = null;
 
     function getClient() {
         var MobileServiceClient = WindowsAzure.MobileServiceClient,
             appUrl = 'https://kudogen.azure-mobile.net/',
-            appKey = 'osuEzuBglAbnLbdYKzEAyuMHrndLvC71',
-        cachedClient = cachedClient || new MobileServiceClient(appUrl, appKey);
+            appKey = 'osuEzuBglAbnLbdYKzEAyuMHrndLvC71';
+        kudogen.cachedClient = kudogen.cachedClient || new MobileServiceClient(appUrl, appKey);
         $('#summary').html('');
-        return cachedClient;
+        return kudogen.cachedClient;
     }
 
     function refreshAuthDisplay(loggedInUser) {
         var client = getClient(),
+            teamMembersTable = client.getTable('TeamMembers'),
             user = loggedInUser || client.currentUser,
             isLoggedIn = !!user;
 
@@ -23,7 +24,7 @@
         if (isLoggedIn) {
             // This just means they are authenticated with their Microsoft Account
             // Try to read their details from the TeamMembers table
-            client.getTable('TeamMembers').where({
+            teamMembersTable.where({
                 teamMemberId: user.userId
             }).read().done(function (userDetails) {
                 var details = userDetails[0];
@@ -31,7 +32,6 @@
                     if (details.approved) {
                         // Good to go
                         $("#login-name").text(details.displayName);
-                        refreshTodoItems();
                     } else {
                         // Found, but not approved
                         $('#summary').html('Unable to authenticate you. Please check with the admins.');
@@ -52,7 +52,10 @@
 
     function logIn() {
         var client = getClient();
-        client.login("microsoftaccount").then(refreshAuthDisplay, function (error) {
+        client.login("microsoftaccount").then(function (loggedInUser) {
+            kudogen.cachedClient = client;
+            refreshAuthDisplay(loggedInUser);
+        }, function (error) {
             alert(error);
         });
     }
@@ -72,4 +75,4 @@
         $("#logged-in button").click(logOut);
     });
 
-}());
+}(window.kudogen = window.kudogen || {}));
