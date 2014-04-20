@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kudogen.Web", "Kudogen.Web\Kudogen.Web.csproj", "{C0A89295-3D77-4E56-B2E6-8DC51217FE7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{646A3778-E46A-43B0-BE8B-FB4A1059AB6B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kudogen.DataAccess", "Kudogen.DataAccess\Kudogen.DataAccess.csproj", "{2A3B3109-DD8C-4354-99C7-AF7A43C8D7A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kudogen.Model", "Kudogen.Models\Kudogen.Model.csproj", "{D46938F3-8E18-4E98-ADA0-1808559FA0AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0A89295-3D77-4E56-B2E6-8DC51217FE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A89295-3D77-4E56-B2E6-8DC51217FE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A89295-3D77-4E56-B2E6-8DC51217FE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A89295-3D77-4E56-B2E6-8DC51217FE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3B3109-DD8C-4354-99C7-AF7A43C8D7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3B3109-DD8C-4354-99C7-AF7A43C8D7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3B3109-DD8C-4354-99C7-AF7A43C8D7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3B3109-DD8C-4354-99C7-AF7A43C8D7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46938F3-8E18-4E98-ADA0-1808559FA0AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46938F3-8E18-4E98-ADA0-1808559FA0AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46938F3-8E18-4E98-ADA0-1808559FA0AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46938F3-8E18-4E98-ADA0-1808559FA0AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 3970438e-4939-4030-9d2a-df7a58208740
+	EndGlobalSection
+EndGlobal
