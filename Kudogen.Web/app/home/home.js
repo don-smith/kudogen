@@ -1,25 +1,21 @@
 ﻿(function () {
     'use strict';
-    var controllerId = 'dashboard';
-    angular.module('app').controller(controllerId, ['common', 'datacontext', dashboard]);
+    var controllerId = 'home';
+    angular.module('app').controller(controllerId, ['common', 'datacontext', home]);
 
-    function dashboard(common, datacontext) {
+    function home(common, datacontext) {
         var getLogFn = common.logger.getLogFn;
         var log = getLogFn(controllerId);
 
         var vm = this;
-        vm.news = {
-            title: 'Hot Towel Angular',
-            description: 'Hot Towel Angular is a SPA template for Angular developers.'
-        };
         vm.teamMembers = [];
-        vm.title = 'Dashboard';
+        vm.title = 'Home';
 
         activate();
 
         function activate() {
             common.activateController([getTeamMembers()], controllerId)
-                .then(function () { log('Activated Dashboard View'); });
+                .then(function () { log('Activated Home View'); });
         }
 
         function getTeamMembers() {

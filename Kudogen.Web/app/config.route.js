@@ -22,11 +22,11 @@
             {
                 url: '/',
                 config: {
-                    templateUrl: 'app/dashboard/dashboard.html',
-                    title: 'dashboard',
+                    templateUrl: 'app/home/home.html',
+                    title: 'home',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-dashboard"></i> Dashboard'
+                        content: '<i class="fa fa-dashboard"></i> Home'
                     }
                 }
             }, {

@@ -54,7 +54,7 @@ namespace Kudogen.Web
                 "~/app/admin/admin.js",
                 "~/app/layout/shell.js",
                 "~/app/layout/sidebar.js",
-                "~/app/dashboard/dashboard.js",
+                "~/app/home/home.js",
                 //"~/app/services/httpAuthInterceptor.js",
                 "~/app/services/datacontext.js",
                 "~/app/services/directives.js",

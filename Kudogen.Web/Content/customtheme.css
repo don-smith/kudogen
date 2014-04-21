@@ -252,6 +252,12 @@ a.btn {
 /* Background colors */
 
 
+.byellow {
+    background: #ffde00 !important;
+    color: #fff !important;
+    border: 0 !important;
+}
+
 .blightblue {
     background: #52b9e9 !important;
     color: #fff !important;
@@ -639,6 +645,17 @@ form {
     }
 
     /* Sidebar colors */
+
+    .sidebar .navi > li.nyellow > a:hover,
+    .sidebar .navi > li.open.nyellow > a,
+    .sidebar .navi > li.current.nyellow > a {
+        background: #ffde00 !important;
+        -webkit-transition: background 0.5s ease, color 0.5s ease;
+        -moz-transition: background 0.5s ease, color 0.5s ease;
+        -o-transition: background 0.5s ease, color 0.5s ease;
+        transition: background 0.5s ease, color 0.5s ease;
+        color: #333;
+    }
 
     .sidebar .navi > li.nlightblue > a:hover,
     .sidebar .navi > li.open.nlightblue > a,

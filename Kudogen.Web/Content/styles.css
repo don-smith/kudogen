@@ -204,11 +204,12 @@ small {
 
 .navbar .navbar-brand {
     background: url(/content/images/icon.png) no-repeat left center !important;
+    font-size: 22px;
     margin: 0 1em;
 }
 
 .navbar .brand-title {
-    margin-left: 2em;
+    margin-left: 3em;
     color: #FFFFFF;
 }
 
