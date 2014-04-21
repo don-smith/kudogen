@@ -8,7 +8,7 @@ namespace Kudogen.DataAccess
     public class KudogenDbContext : DbContext
     {
         public KudogenDbContext()
-            : base(nameOrConnectionString: "Kudogen") { }
+            : base(nameOrConnectionString: "KudogenDB") { }
 
         static KudogenDbContext()
         {
