@@ -51,13 +51,14 @@ namespace Kudogen.Web
                 "~/app/common/logger.js",
                 "~/app/common/spinner.js",
                 "~/app/common/bootstrap/bootstrap.dialog.js",
-                "~/app/services/datacontext.js",
-                "~/app/services/directives.js",
-                //"~/app/services/httpAuthInterceptor.js", 
+                "~/app/admin/admin.js",
                 "~/app/layout/shell.js",
                 "~/app/layout/sidebar.js",
-                "~/app/admin/admin.js",
-                "~/app/dashboard/dashboard.js"
+                "~/app/dashboard/dashboard.js",
+                //"~/app/services/httpAuthInterceptor.js",
+                "~/app/services/datacontext.js",
+                "~/app/services/directives.js",
+                "~/app/services/entityManagerFactory.js"
                 )); 
         }
     }

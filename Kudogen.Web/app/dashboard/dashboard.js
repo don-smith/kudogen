@@ -24,7 +24,7 @@
 
         function getTeamMembers() {
             return datacontext.getTeamMembers().then(function (data) {
-                return vm.getTeamMembers = data;
+                return vm.teamMembers = data;
             });
         }
     }
