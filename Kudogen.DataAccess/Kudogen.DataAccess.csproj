@@ -96,7 +96,7 @@
     <Compile Include="KudogenDbContext.cs" />
     <Compile Include="KudogenRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TeamInitializer.cs" />
+    <Compile Include="DataInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
