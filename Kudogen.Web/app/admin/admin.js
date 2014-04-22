@@ -10,17 +10,24 @@
         var vm = this;
         vm.title = 'Admin';
         vm.teamMembers = [];
+        vm.awards = [];
 
         activate();
 
         function activate() {
-            common.activateController([getTeamMembers()], controllerId)
+            common.activateController([getTeamMembers(), getAvailableAwards()], controllerId)
                 .then(function () { log('Activated Admin View'); });
         }
 
         function getTeamMembers() {
             return datacontext.getTeamMembers().then(function(data) {
                 return vm.teamMembers = data;
+            });
+        }
+
+        function getAvailableAwards() {
+            return datacontext.getAvailableAwards().then(function(data) {
+                return vm.awards = data;
             });
         }
     }

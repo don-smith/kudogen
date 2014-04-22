@@ -14,7 +14,8 @@
         var logSuccess = getLogFn(serviceId, 'success');
 
         var service = {
-            getTeamMembers: getTeamMembers
+            getTeamMembers: getTeamMembers,
+            getAvailableAwards: getAvailableAwards
         };
 
         return service;
@@ -24,7 +25,7 @@
             var query = new EntityQuery('TeamMembers');
 
             return manager.executeQuery(query)
-                .then(querySucceeded, queryFailed);
+                .then(querySucceeded, _queryFailed);
 
             function querySucceeded(data) {
                 teamMembers = data.results;
@@ -33,7 +34,21 @@
             }
         }
 
-        function queryFailed(error) {
+        function getAvailableAwards() {
+            var awards;
+            var query = new EntityQuery('AvailableAwards');
+
+            return manager.executeQuery(query)
+                .then(querySucceeded, _queryFailed);
+
+            function querySucceeded(data) {
+                awards = data.results;
+                log('Retrieved [Available Awards] from remote data source', awards.length, true);
+                return awards;
+            }
+        }
+
+        function _queryFailed(error) {
             var msg = config.appErrorPrefix + 'Error retreiving data.' + error.message;
             logError(msg, error);
             throw error;
