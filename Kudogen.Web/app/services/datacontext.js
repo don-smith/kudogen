@@ -2,9 +2,9 @@
     'use strict';
 
     var serviceId = 'datacontext';
-    angular.module('app').factory(serviceId, ['common', 'entityManagerFactory', datacontext]);
+    angular.module('app').factory(serviceId, ['common', 'config', 'entityManagerFactory', datacontext]);
 
-    function datacontext(common, emFactory) {
+    function datacontext(common, config, emFactory) {
         var $q = common.$q;
         var EntityQuery = breeze.EntityQuery;
         var manager = emFactory.newManager();
